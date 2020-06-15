@@ -1,0 +1,32 @@
+Write code to explain the following javascript functions with suitable examples: map, filter,
+reduce
+
+MAP:
+	-Call it on any array and accepts call back.
+	-Map returns an array with finished product.
+Syntax:
+	var task_names = tasks.map(function (task, index, array) {
+ 
+    return task.name; 
+ 
+});
+
+FILTER:
+	-Takes an array, and filters out unwanted elements.
+	-Avoid mutating an array inside a for loop.
+	-assign its result directly to a new variable.
+Syntax:
+	var difficult_tasks = tasks.filter(function (task) {
+    return task.duration >= 120;
+});
+ 
+// Using ES6
+var difficult_tasks = tasks.filter((task) => task.duration >= 120 );
+
+REDUCE:
+	-Takes all elements in an array, and reduces them into a single value.
+Syntax:
+	var total = [1, 2, 3, 4, 5].reduce(function (previous, current) {
+    return previous + current;
+}, 0);
+
